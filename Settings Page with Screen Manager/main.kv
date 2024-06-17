@@ -33,18 +33,30 @@ ScreenManager:
             elevation: 10
         ScrollView:
             MDList:
-                OneLineListItem:
+                TwoLineAvatarListItem:
                     text: 'Settings Screen 1'
+                    secondary_text: "Secondary text here"
                     on_release: app.root.current = 'SettingsScreen1'
-                OneLineListItem:
+                    IconLeftWidget:
+                        icon: 'cog'
+                TwoLineAvatarListItem:
                     text: 'Settings Screen 2'
+                    secondary_text: "Secondary text here"
                     on_release: app.root.current = 'SettingsScreen2'
-                OneLineListItem:
+                    IconLeftWidget:
+                        icon: 'cog'
+                TwoLineAvatarListItem:
                     text: 'Settings Screen 3'
+                    secondary_text: "Secondary text here"
                     on_release: app.root.current = 'SettingsScreen3'
-                OneLineListItem:
+                    IconLeftWidget:
+                        icon: 'cog'
+                TwoLineAvatarListItem:
                     text: 'Settings Screen 4'
+                    secondary_text: "Secondary text here"
                     on_release: app.root.current = 'SettingsScreen4'
+                    IconLeftWidget:
+                        icon: 'cog'
 
 <SettingsScreen1>:
     MDBoxLayout:

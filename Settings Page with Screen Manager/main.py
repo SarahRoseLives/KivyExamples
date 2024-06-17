@@ -34,6 +34,9 @@ class Example(MDApp):
     def navigate_main(self):
         self.root.current = 'Main'
 
+    # Define a method to handle navigation back to settings screen
+    def navigate_back(self):
+        self.root.current = 'Settings'
 
 
 # Entry point of the application
