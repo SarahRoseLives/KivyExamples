@@ -1,0 +1,77 @@
+<ContentNavigationDrawer>:
+    orientation: 'vertical'
+    padding: '8dp'
+    spacing: '8dp'
+
+    MDLabel:
+        text: "Navigation Drawer"
+        font_style: 'H6'
+        size_hint_y: None
+        height: self.texture_size[1]
+        padding_x: '10dp'
+        theme_text_color: "Secondary"
+
+    ScrollView:
+        MDList:
+            id: box
+
+MDScreen:
+
+    MDNavigationLayout:
+
+        MDScreenManager:
+            id: screen_manager
+
+            MDScreen:
+                name: 'screen1'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: 'Screen 1'
+                        halign: 'center'
+
+            MDScreen:
+                name: 'screen2'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: 'Screen 2'
+                        halign: 'center'
+
+            MDScreen:
+                name: 'screen3'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: 'Screen 3'
+                        halign: 'center'
+
+            MDScreen:
+                name: 'screen4'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: 'Screen 4'
+                        halign: 'center'
+
+            MDScreen:
+                name: 'screen5'
+                MDBoxLayout:
+                    orientation: 'vertical'
+                    MDLabel:
+                        text: 'Screen 5'
+                        halign: 'center'
+
+        MDNavigationDrawer:
+            id: nav_drawer
+            radius: (0, 16, 16, 0)
+            ContentNavigationDrawer:
+
+    MDTopAppBar:
+        title: "Navigation Drawer"
+        elevation: 4
+        pos_hint: {"top": 1}
+        md_bg_color: "#e7e4c0"
+        specific_text_color: "#4a4939"
+        left_action_items:
+            [['menu', lambda x: nav_drawer.set_state("open")]]

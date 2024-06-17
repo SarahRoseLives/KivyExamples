@@ -1,0 +1,54 @@
+BoxLayout:
+
+    MDNavigationRail:
+        id: nav_rail
+
+        MDNavigationRailItem:
+            text: "Python"
+            icon: "language-python"
+            on_release: app.switch_screen("python")
+
+        MDNavigationRailItem:
+            text: "JavaScript"
+            icon: "language-javascript"
+            on_release: app.switch_screen("javascript")
+
+        MDNavigationRailItem:
+            text: "CPP"
+            icon: "language-cpp"
+            on_release: app.switch_screen("cpp")
+
+        MDNavigationRailItem:
+            text: "Git"
+            icon: "git"
+            on_release: app.switch_screen("git")
+
+    ScreenManager:
+        id: screen_manager
+        MDScreen:
+            name: "python"
+            MDLabel:
+                text: "Python Screen"
+                halign: "center"
+                valign: "middle"
+
+        MDScreen:
+            name: "javascript"
+            MDLabel:
+                text: "JavaScript Screen"
+                halign: "center"
+                valign: "middle"
+
+        MDScreen:
+            name: "cpp"
+            MDLabel:
+                text: "CPP Screen"
+                halign: "center"
+                valign: "middle"
+
+        MDScreen:
+            name: "git"
+            MDLabel:
+                text: "Git Screen"
+                halign: "center"
+                valign: "middle"

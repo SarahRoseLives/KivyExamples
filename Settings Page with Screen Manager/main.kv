@@ -1,0 +1,95 @@
+ScreenManager:
+    MainScreen:
+        name: 'Main'
+    SettingsScreen:
+        name: 'Settings'
+    SettingsScreen1:
+        name: 'SettingsScreen1'
+    SettingsScreen2:
+        name: 'SettingsScreen2'
+    SettingsScreen3:
+        name: 'SettingsScreen3'
+    SettingsScreen4:
+        name: 'SettingsScreen4'
+
+<MainScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDLabel:
+            text: "Main Screen"
+            font_style: 'H5'
+            halign: 'center'
+        MDRaisedButton:
+            text: "Go to Settings"
+            pos_hint: {'center_x': 0.5}
+            on_release: app.root.current = 'Settings'
+
+<SettingsScreen>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: 'Settings'
+            left_action_items: [["arrow-left", lambda x: app.navigate_main()]]
+            elevation: 10
+        ScrollView:
+            MDList:
+                OneLineListItem:
+                    text: 'Settings Screen 1'
+                    on_release: app.root.current = 'SettingsScreen1'
+                OneLineListItem:
+                    text: 'Settings Screen 2'
+                    on_release: app.root.current = 'SettingsScreen2'
+                OneLineListItem:
+                    text: 'Settings Screen 3'
+                    on_release: app.root.current = 'SettingsScreen3'
+                OneLineListItem:
+                    text: 'Settings Screen 4'
+                    on_release: app.root.current = 'SettingsScreen4'
+
+<SettingsScreen1>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_back()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 1"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen2>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_back()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 2"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen3>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_back()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 3"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen4>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_back()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 4"
+            font_style: 'H5'
+            halign: 'center'
