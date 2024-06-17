@@ -22,7 +22,7 @@ class SettingsScreen4(Screen):
     pass
 
 # Create the main application class
-class MyApp(MDApp):
+class Example(MDApp):
 
     def build(self):
         # Load the kv file
@@ -41,4 +41,4 @@ class MyApp(MDApp):
 
 # Entry point of the application
 if __name__ == '__main__':
-    MyApp().run()
+    Example().run()
