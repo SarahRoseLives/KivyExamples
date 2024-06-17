@@ -1,0 +1,118 @@
+ScreenManager:
+    MainScreen:
+        name: 'Main'
+    SettingsScreen1:
+        name: 'SettingsScreen1'
+    SettingsScreen2:
+        name: 'SettingsScreen2'
+    SettingsScreen3:
+        name: 'SettingsScreen3'
+    SettingsScreen4:
+        name: 'SettingsScreen4'
+
+
+<MainScreen>:
+    MDBottomNavigation:
+        #panel_color: "#eeeaea"
+        selected_color_background: "orange"
+        text_color_active: "lightgrey"
+
+        MDBottomNavigationItem:
+            name: 'screen 1'
+            text: 'Mail'
+            icon: 'gmail'
+            badge_icon: "numeric-10"
+
+            MDLabel:
+                text: 'Mail'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 2'
+            text: 'Twitter'
+            icon: 'twitter'
+            badge_icon: "numeric-5"
+
+            MDLabel:
+                text: 'Twitter'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 3'
+            text: 'LinkedIN'
+            icon: 'linkedin'
+
+            MDLabel:
+                text: 'LinkedIN'
+                halign: 'center'
+
+        MDBottomNavigationItem:
+            name: 'screen 4'
+            text: 'Settings'
+            icon: 'cog'
+
+            MDBoxLayout:
+                orientation: 'vertical'
+                ScrollView:
+                    MDList:
+                        OneLineListItem:
+                            text: 'Settings Screen 1'
+                            on_release: app.root.current = 'SettingsScreen1'
+                        OneLineListItem:
+                            text: 'Settings Screen 2'
+                            on_release: app.root.current = 'SettingsScreen2'
+                        OneLineListItem:
+                            text: 'Settings Screen 3'
+                            on_release: app.root.current = 'SettingsScreen3'
+                        OneLineListItem:
+                            text: 'Settings Screen 4'
+                            on_release: app.root.current = 'SettingsScreen4'
+
+
+<SettingsScreen1>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_main()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 1"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen2>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_main()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 2"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen3>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_main()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 3"
+            font_style: 'H5'
+            halign: 'center'
+
+<SettingsScreen4>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            title: "Settings"
+            left_action_items: [["arrow-left", lambda x: app.navigate_main()]]
+            elevation: 10
+        MDLabel:
+            text: "Settings Screen 4"
+            font_style: 'H5'
+            halign: 'center'

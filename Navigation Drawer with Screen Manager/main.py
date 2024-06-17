@@ -3,8 +3,6 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.app import MDApp
 from kivymd.uix.list import OneLineListItem
 
-
-
 class ContentNavigationDrawer(MDBoxLayout):
     def add_items(self, app):
         # Add navigation items for each screen
@@ -18,7 +16,7 @@ class ContentNavigationDrawer(MDBoxLayout):
 
 class Example(MDApp):
     def build(self):
-        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.theme_style = "Light"
         root = Builder.load_file('main.kv')
         return root
 
