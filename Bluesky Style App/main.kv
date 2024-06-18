@@ -27,13 +27,14 @@ MDScreen:
                 MDBoxLayout:
                     orientation: 'vertical'
                     MDBottomNavigation:
-                        #panel_color: "#eeeaea"
-                        selected_color_background: "orange"
-                        text_color_active: "lightgrey"
+                        panel_color: "#FFFFFF"
+
+
 
                         MDBottomNavigationItem:
                             name: 'screen 1'
                             icon: 'home'
+                            md_bg_color: '#FFFFFF'
 
                             MDLabel:
                                 text: 'Mail'
@@ -42,7 +43,9 @@ MDScreen:
                         MDBottomNavigationItem:
                             name: 'screen 2'
                             icon: 'account-search'
+                            md_bg_color: '#FFFFFF'
                             badge_icon: "numeric-5"
+
 
                             MDLabel:
                                 text: 'Twitter'
@@ -51,22 +54,28 @@ MDScreen:
                         MDBottomNavigationItem:
                             name: 'screen 3'
                             icon: 'chat-processing-outline'
+                            md_bg_color: '#FFFFFF'
+
 
                             MDLabel:
                                 text: 'LinkedIN'
                                 halign: 'center'
 
                         MDBottomNavigationItem:
-                            name: 'screen 3'
+                            name: 'screen 4'
                             icon: 'bell-outline'
+                            md_bg_color: '#FFFFFF'
+
 
                             MDLabel:
                                 text: 'LinkedIN'
                                 halign: 'center'
 
                         MDBottomNavigationItem:
-                            name: 'screen 3'
+                            name: 'screen 5'
                             icon: 'account-reactivate'
+                            md_bg_color: '#FFFFFF'
+
 
                             MDLabel:
                                 text: 'LinkedIN'
@@ -76,6 +85,8 @@ MDScreen:
                 name: 'screen2'
                 MDBoxLayout:
                     orientation: 'vertical'
+                    md_bg_color: '#FFFFFF'
+
                     MDLabel:
                         text: 'Screen 2'
                         halign: 'center'
@@ -84,6 +95,8 @@ MDScreen:
                 name: 'screen3'
                 MDBoxLayout:
                     orientation: 'vertical'
+                    md_bg_color: '#FFFFFF'
+
                     MDLabel:
                         text: 'Screen 3'
                         halign: 'center'
@@ -92,6 +105,8 @@ MDScreen:
                 name: 'screen4'
                 MDBoxLayout:
                     orientation: 'vertical'
+                    md_bg_color: '#FFFFFF'
+
                     MDLabel:
                         text: 'Screen 4'
                         halign: 'center'
@@ -100,6 +115,8 @@ MDScreen:
                 name: 'screen5'
                 MDBoxLayout:
                     orientation: 'vertical'
+                    md_bg_color: '#FFFFFF'
+
                     MDLabel:
                         text: 'Screen 5'
                         halign: 'center'
@@ -110,10 +127,10 @@ MDScreen:
             ContentNavigationDrawer:
 
     MDTopAppBar:
-        title: "Navigation Drawer"
-        elevation: 4
+        title: "Bluesky~Like App UI"
+        elevation: 0
         pos_hint: {"top": 1}
-        md_bg_color: "#e7e4c0"
+        md_bg_color: "#FFFFFF"
         specific_text_color: "#4a4939"
         left_action_items:
             [['menu', lambda x: nav_drawer.set_state("open")]]
