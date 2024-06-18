@@ -1,14 +1,14 @@
 from kivy.lang import Builder
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.app import MDApp
-from kivymd.uix.list import OneLineListItem
+from kivymd.uix.list import OneLineAvatarIconListItem
 from kivymd.app import MDApp
 
 class ContentNavigationDrawer(MDBoxLayout):
     def add_items(self, app):
         # Add navigation items for each screen
         for i in range(1, 6):
-            item = OneLineListItem(
+            item = OneLineAvatarIconListItem(
                 text=f"Screen {i}",
                 on_release=app.create_screen_changer(f"screen{i}")
             )
