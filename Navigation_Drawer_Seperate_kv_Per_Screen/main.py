@@ -25,8 +25,8 @@ class Example(MDApp):
         Builder.load_file("screen1.kv")
         Builder.load_file("screen2.kv")
 
-        self.theme_cls.primary_palette = "Orange"
-        self.theme_cls.theme_style = "Dark"
+        self.theme_cls.primary_palette = "Blue"
+        self.theme_cls.theme_style = "Light"
         return MainScreen()
 
 if __name__ == "__main__":

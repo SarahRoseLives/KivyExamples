@@ -1,20 +1,3 @@
-<ContentNavigationDrawer>:
-    orientation: 'vertical'
-    padding: '8dp'
-    spacing: '8dp'
-
-    MDLabel:
-        text: "Navigation Drawer"
-        font_style: 'H6'
-        size_hint_y: None
-        height: self.texture_size[1]
-        padding_x: '10dp'
-        theme_text_color: "Secondary"
-
-    ScrollView:
-        MDList:
-            id: box
-
 MDScreen:
 
     MDNavigationLayout:
@@ -23,113 +6,155 @@ MDScreen:
             id: screen_manager
 
             MDScreen:
-                name: 'screen1'
-                MDBoxLayout:
+                name: "home"
+
+                BoxLayout:
                     orientation: 'vertical'
-                    MDBottomNavigation:
-                        panel_color: "#FFFFFF"
 
-                        MDBottomNavigationItem:
-                            name: 'screen 1'
-                            icon: 'home'
-                            md_bg_color: '#FFFFFF'
+                    MDTopAppBar:
+                        title: "Navigation Drawer"
+                        elevation: 0
+                        pos_hint: {"top": 1}
+                        specific_text_color: app.theme_cls.text_color
+                        md_bg_color: '#FFFFFF'
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
-                            MDLabel:
-                                text: 'Mail'
-                                halign: 'center'
-
-                        MDBottomNavigationItem:
-                            name: 'screen 2'
-                            icon: 'account-search'
-                            md_bg_color: '#FFFFFF'
-                            badge_icon: "numeric-5"
+                    BoxLayout:  
+                        orientation: 'vertical'
+                        MDBoxLayout:
+                            orientation: 'vertical'
+                            adaptive_height: True
 
 
-                            MDLabel:
-                                text: 'Twitter'
-                                halign: 'center'
+                        MDBottomNavigation:
+                            panel_color: "#FFFFFF"
 
-                        MDBottomNavigationItem:
-                            name: 'screen 3'
-                            icon: 'chat-processing-outline'
-                            md_bg_color: '#FFFFFF'
+                            MDBottomNavigationItem:
+                                name: 'screen 1'
+                                icon: 'home'
+                                #md_bg_color: '#FFFFFF'
 
+                                MDLabel:
+                                    text: 'Mail'
+                                    halign: 'center'
 
-                            MDLabel:
-                                text: 'LinkedIN'
-                                halign: 'center'
+                            MDBottomNavigationItem:
+                                name: 'screen 2'
+                                icon: 'account-search'
+                                #md_bg_color: '#FFFFFF'
+                                badge_icon: "numeric-5"
 
-                        MDBottomNavigationItem:
-                            name: 'screen 4'
-                            icon: 'bell-outline'
-                            md_bg_color: '#FFFFFF'
+                                MDLabel:
+                                    text: 'Twitter'
+                                    halign: 'center'
 
+                            MDBottomNavigationItem:
+                                name: 'screen 3'
+                                icon: 'chat-processing-outline'
+                                #md_bg_color: '#FFFFFF'
 
-                            MDLabel:
-                                text: 'LinkedIN'
-                                halign: 'center'
+                                MDLabel:
+                                    text: 'LinkedIN'
+                                    halign: 'center'
 
-                        MDBottomNavigationItem:
-                            name: 'screen 5'
-                            icon: 'account-reactivate'
-                            md_bg_color: '#FFFFFF'
+                            MDBottomNavigationItem:
+                                name: 'screen 4'
+                                icon: 'bell-outline'
+                                #md_bg_color: '#FFFFFF'
 
+                                MDLabel:
+                                    text: 'LinkedIN'
+                                    halign: 'center'
 
-                            MDLabel:
-                                text: 'LinkedIN'
-                                halign: 'center'
+                            MDBottomNavigationItem:
+                                name: 'screen 5'
+                                icon: 'account-reactivate'
+                                #md_bg_color: '#FFFFFF'
+
+                                MDLabel:
+                                    text: 'LinkedIN'
+                                    halign: 'center'
 
             MDScreen:
-                name: 'screen2'
-                MDBoxLayout:
+                name: "inbox"
+
+                BoxLayout:
                     orientation: 'vertical'
-                    md_bg_color: '#FFFFFF'
 
+                    MDTopAppBar:
+                        title: "Inbox"
+                        elevation: 0
+                        pos_hint: {"top": 1}
+                        specific_text_color: app.theme_cls.text_color
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
-                    MDLabel:
-                        text: 'Screen 2'
-                        halign: 'center'
+                    BoxLayout:  # Main content area
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: "Inbox Screen"
+                            halign: "center"
 
             MDScreen:
-                name: 'screen3'
-                MDBoxLayout:
+                name: "outbox"
+
+                BoxLayout:
                     orientation: 'vertical'
-                    md_bg_color: '#FFFFFF'
 
-                    MDLabel:
-                        text: 'Screen 3'
-                        halign: 'center'
+                    MDTopAppBar:
+                        title: "Outbox"
+                        elevation: 0
+                        pos_hint: {"top": 1}
+                        specific_text_color: app.theme_cls.text_color
+                        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
-            MDScreen:
-                name: 'screen4'
-                MDBoxLayout:
-                    orientation: 'vertical'
-                    md_bg_color: '#FFFFFF'
-
-                    MDLabel:
-                        text: 'Screen 4'
-                        halign: 'center'
-
-            MDScreen:
-                name: 'screen5'
-                MDBoxLayout:
-                    orientation: 'vertical'
-                    md_bg_color: '#FFFFFF'
-
-                    MDLabel:
-                        text: 'Screen 5'
-                        halign: 'center'
+                    BoxLayout:  # Main content area
+                        orientation: 'vertical'
+                        MDLabel:
+                            text: "Outbox Screen"
+                            halign: "center"
 
         MDNavigationDrawer:
             id: nav_drawer
             radius: (0, 16, 16, 0)
-            ContentNavigationDrawer:
 
-    MDTopAppBar:
-        title: "Bluesky~Like App UI"
-        elevation: 0
-        pos_hint: {"top": 1}
-        md_bg_color: "#FFFFFF"
-        specific_text_color: "#4a4939"
-        left_action_items:
-            [['menu', lambda x: nav_drawer.set_state("open")]]
+            MDNavigationDrawerMenu:
+
+                MDNavigationDrawerHeader:
+                    title: "Header title"
+                    #title_color: "#4a4939"
+                    text: "Header text"
+                    spacing: "4dp"
+                    padding: "12dp", 0, 0, "56dp"
+
+                MDNavigationDrawerLabel:
+                    text: "Mail"
+
+                MDNavigationDrawerItem:
+                    icon: "home"
+                    text: "Home"
+                    on_release: app.switch_screen("home")
+
+                MDNavigationDrawerItem:
+                    icon: "gmail"
+                    right_text: "+99"
+                    #text_right_color: "#4a4939"
+                    text: "Inbox"
+                    on_release: app.switch_screen("inbox")
+
+                MDNavigationDrawerItem:
+                    icon: "send"
+                    text: "Outbox"
+                    on_release: app.switch_screen("outbox")
+
+                MDNavigationDrawerDivider:
+
+                MDNavigationDrawerLabel:
+                    text: "Labels"
+
+                MDNavigationDrawerItem:
+                    icon: "information-outline"
+                    text: "Label"
+
+                MDNavigationDrawerItem:
+                    icon: "information-outline"
+                    text: "Label"
