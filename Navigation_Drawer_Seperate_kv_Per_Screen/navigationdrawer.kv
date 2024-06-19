@@ -1,0 +1,32 @@
+<ContentNavigationDrawer>:
+    MDList:
+        OneLineListItem:
+            text: "Screen 1"
+            on_press:
+                root.nav_drawer.set_state("close")
+                root.screen_manager.current = "scr 1"
+
+        OneLineListItem:
+            text: "Screen 2"
+            on_press:
+                root.nav_drawer.set_state("close")
+                root.screen_manager.current = "scr 2"
+
+<MainScreen>:
+    MDTopAppBar:
+        pos_hint: {"top": 1}
+        elevation: 4
+        title: "MDNavigationDrawer"
+        left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
+
+    MDNavigationLayout:
+        MDScreenManager:
+            id: screen_manager
+            MDScreen1:
+            MDScreen2:
+        MDNavigationDrawer:
+            id: nav_drawer
+            radius: (0, 16, 16, 0)
+            ContentNavigationDrawer:
+                screen_manager: screen_manager
+                nav_drawer: nav_drawer
