@@ -12,14 +12,14 @@ MDScreen:
                     orientation: 'vertical'
 
                     MDTopAppBar:
-                        title: "Navigation Drawer"
+                        title: "Home"
                         elevation: 0
                         pos_hint: {"top": 1}
                         specific_text_color: app.theme_cls.text_color
                         md_bg_color: '#FFFFFF'
                         left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
-                    BoxLayout:  
+                    BoxLayout:
                         orientation: 'vertical'
                         MDBoxLayout:
                             orientation: 'vertical'
@@ -85,6 +85,7 @@ MDScreen:
                         title: "Inbox"
                         elevation: 0
                         pos_hint: {"top": 1}
+                        md_bg_color: '#FFFFFF'
                         specific_text_color: app.theme_cls.text_color
                         left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
@@ -104,6 +105,7 @@ MDScreen:
                         title: "Outbox"
                         elevation: 0
                         pos_hint: {"top": 1}
+                        md_bg_color: '#FFFFFF'
                         specific_text_color: app.theme_cls.text_color
                         left_action_items: [["menu", lambda x: nav_drawer.set_state("open")]]
 
