@@ -1,0 +1,29 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+
+        ScreenManager:
+            id: screen_manager
+
+            MDScreen1:
+            MDScreen2:
+            MDScreen3:
+
+        MDBottomNavigation:
+            MDBottomNavigationItem:
+                name: 'screen1'
+                text: 'Home'
+                icon: 'home'
+                on_tab_press: root.ids.screen_manager.current = 'scr 1'
+
+            MDBottomNavigationItem:
+                name: 'screen2'
+                text: 'Profile'
+                icon: 'account'
+                on_tab_press: root.ids.screen_manager.current = 'scr 2'
+
+            MDBottomNavigationItem:
+                name: 'screen3'
+                text: 'Settings'
+                icon: 'cog'
+                on_tab_press: root.ids.screen_manager.current = 'scr 3'
