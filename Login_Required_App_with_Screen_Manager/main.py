@@ -6,41 +6,47 @@ from kivymd.uix.dialog import MDDialog
 
 class LoginScreen(Screen):
     def check_login(self):
-        username = self.ids.username_field.text
-        password = self.ids.password_field.text
+        try:
+            username = self.ids.username_field.text
+            password = self.ids.password_field.text
 
-        # HTTP POST request to server for login
-        url = 'http://localhost:5000/login'
-        data = {'username': username, 'password': password}
-        response = requests.post(url, json=data)
+            # HTTP POST request to server for login
+            url = 'http://localhost:5000/login'
+            data = {'username': username, 'password': password}
+            response = requests.post(url, json=data)
 
-        if response.status_code == 200:
-            app = MDApp.get_running_app()
-            app.root.current = 'main'
-        else:
-            self.ids.username_field.error = True
-            self.ids.password_field.error = True
+            if response.status_code == 200:
+                app = MDApp.get_running_app()
+                app.root.current = 'main'
+            else:
+                self.ids.username_field.error = True
+                self.ids.password_field.error = True
+        except:
+            pass
 
 class RegisterScreen(Screen):
     def register_user(self):
-        username = self.ids.reg_username_field.text
-        password = self.ids.reg_password_field.text
+        try:
+            username = self.ids.reg_username_field.text
+            password = self.ids.reg_password_field.text
 
-        # HTTP POST request to server for registration
-        url = 'http://localhost:5000/register'
-        data = {'username': username, 'password': password}
-        response = requests.post(url, json=data)
+            # HTTP POST request to server for registration
+            url = 'http://localhost:5000/register'
+            data = {'username': username, 'password': password}
+            response = requests.post(url, json=data)
 
-        if response.status_code == 201:
-            dialog = MDDialog(title='Success', text='User created successfully!')
-            dialog.open()
-            app = MDApp.get_running_app()
-            app.root.current = 'login'
-        elif response.status_code == 400:
-            self.ids.reg_username_field.error = True
-        else:
-            dialog = MDDialog(title='Error', text='Failed to create user')
-            dialog.open()
+            if response.status_code == 201:
+                dialog = MDDialog(title='Success', text='User created successfully!')
+                dialog.open()
+                app = MDApp.get_running_app()
+                app.root.current = 'login'
+            elif response.status_code == 400:
+                self.ids.reg_username_field.error = True
+            else:
+                dialog = MDDialog(title='Error', text='Failed to create user')
+                dialog.open()
+        except:
+            pass
 
 class MainAppScreen(Screen):
     pass
