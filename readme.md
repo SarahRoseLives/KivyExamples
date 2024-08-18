@@ -12,7 +12,7 @@ To build and deploy an APK using Buildozer, follow these steps:
 First, ensure you have Python and pip installed. Then, install the necessary Python packages:
 
 ```bash
-pip install cython kivy kivymd
+pip install cython kivymd==1.2.0 kivy==2.3.0
 ```
 
 ### 2. Install Buildozer
@@ -25,7 +25,7 @@ pip install buildozer cython
 
 ### 3. Update `buildozer.spec`
 
-If you have existing `buildozer.spec` file, make sure to update them with the dependencies used in your project. Add any necessary libraries or modules to the `requirements` section under `[app]` in your `buildozer.spec` file.
+Update the `buildozer.spec` file, make sure to update them with the dependencies used in your project. Add any necessary libraries or modules to the `requirements` section under `[app]` in your `buildozer.spec` file.
 
 ### 4. Build the APK
 
