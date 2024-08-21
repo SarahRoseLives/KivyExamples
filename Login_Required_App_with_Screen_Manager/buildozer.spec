@@ -1,5 +1,9 @@
 [app]
 
+# Buildozer Documentation
+# https://github.com/Android-for-Python/Android-for-Python-Users/blob/main/README.md
+
+
 #pre-splace screen
 #presplash.filename = resources/images/splash.png
 
